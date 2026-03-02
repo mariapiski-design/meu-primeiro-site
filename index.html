@@ -1,11 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Galeria Infantil - 50 Atividades</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a5568;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 0 rgba(255,255,255,0.5);
+        }
+
+        h1 span {
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            border: 3px solid transparent;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: #ff6b6b;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 15px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .image-container img {
+            transform: scale(1.1);
+        }
+
+        .activity-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            font-size: 1.1em;
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 50px;
+        }
+
+        .footer a {
+            color: #ffeaa7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para imagens placeholder */
+        .placeholder-img {
+            opacity: 0.8;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
- eu não sei o que estou fazendo !!
+    <div class="container">
+        <h1>🎨 <span>Galeria de Atividades Infantis</span> 🎨</h1>
+        <h2 style="text-align: center; color: #4a5568; margin-bottom: 20px;">50 Atividades Divertidas para Crianças</h2>
+        
+        <div class="gallery">
+            <!-- Gerando 50 itens de galeria -->
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/FF6B6B/FFFFFF?text=Atividade+1" alt="Atividade infantil 1 - Desenho para colorir" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 01</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/4ECDC4/FFFFFF?text=Atividade+2" alt="Atividade infantil 2 - Pintura com dedos" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 02</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/45B7D1/FFFFFF?text=Atividade+3" alt="Atividade infantil 3 - Colagem colorida" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 03</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/96CEB4/FFFFFF?text=Atividade+4" alt="Atividade infantil 4 - Dobradura" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 04</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/FFEAA7/4A4A4A?text=Atividade+5" alt="Atividade infantil 5 - Massinha de modelar" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 05</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/D4A5A5/FFFFFF?text=Atividade+6" alt="Atividade infantil 6 - Recorte e cole" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 06</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/9B59B6/FFFFFF?text=Atividade+7" alt="Atividade infantil 7 - Pintura com guache" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 07</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/3498DB/FFFFFF?text=Atividade+8" alt="Atividade infantil 8 - Desenho livre" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 08</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/E67E22/FFFFFF?text=Atividade+9" alt="Atividade infantil 9 - Carrimbo com legumes" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 09</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/2ECC71/FFFFFF?text=Atividade+10" alt="Atividade infantil 10 - Pintura com esponja" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 10</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/E74C3C/FFFFFF?text=Atividade+11" alt="Atividade infantil 11 - Mosaico de papel" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 11</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/1ABC9C/FFFFFF?text=Atividade+12" alt="Atividade infantil 12 - Pintura com cotonete" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 12</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/F39C12/FFFFFF?text=Atividade+13" alt="Atividade infantil 13 - Desenho com giz de cera" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 13</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/8E44AD/FFFFFF?text=Atividade+14" alt="Atividade infantil 14 - Pintura com aquarela" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 14</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/27AE60/FFFFFF?text=Atividade+15" alt="Atividade infantil 15 - Colagem com areia colorida" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 15</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/16A085/FFFFFF?text=Atividade+16" alt="Atividade infantil 16 - Pintura com sopro" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 16</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/D35400/FFFFFF?text=Atividade+17" alt="Atividade infantil 17 - Desenho com lápis de cor" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 17</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/C0392B/FFFFFF?text=Atividade+18" alt="Atividade infantil 18 - Pintura com rolinho" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 18</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/7F8C8D/FFFFFF?text=Atividade+19" alt="Atividade infantil 19 - Colagem com barbante" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 19</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/BDC3C7/2C3E50?text=Atividade+20" alt="Atividade infantil 20 - Pintura com as mãos" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 20</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/FF6B6B/FFFFFF?text=Atividade+21" alt="Atividade infantil 21 - Dobradura de animais" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 21</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/4ECDC4/FFFFFF?text=Atividade+22" alt="Atividade infantil 22 - Pintura em tecido" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 22</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/45B7D1/FFFFFF?text=Atividade+23" alt="Atividade infantil 23 - Colagem com folhas" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 23</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/96CEB4/FFFFFF?text=Atividade+24" alt="Atividade infantil 24 - Pintura em pedra" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 24</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/FFEAA7/4A4A4A?text=Atividade+25" alt="Atividade infantil 25 - Desenho com giz no chão" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 25</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/D4A5A5/FFFFFF?text=Atividade+26" alt="Atividade infantil 26 - Pintura com barbante" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 26</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/9B59B6/FFFFFF?text=Atividade+27" alt="Atividade infantil 27 - Colagem com grãos" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 27</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/3498DB/FFFFFF?text=Atividade+28" alt="Atividade infantil 28 - Pintura em vidro" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 28</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/E67E22/FFFFFF?text=Atividade+29" alt="Atividade infantil 29 - Desenho com carvão" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 29</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/2ECC71/FFFFFF?text=Atividade+30" alt="Atividade infantil 30 - Pintura com esmalte" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 30</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/E74C3C/FFFFFF?text=Atividade+31" alt="Atividade infantil 31 - Colagem com lantejoulas" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 31</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/1ABC9C/FFFFFF?text=Atividade+32" alt="Atividade infantil 32 - Pintura com café" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 32</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/F39C12/FFFFFF?text=Atividade+33" alt="Atividade infantil 33 - Desenho com areia" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 33</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/8E44AD/FFFFFF?text=Atividade+34" alt="Atividade infantil 34 - Pintura com gelo" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 34</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/27AE60/FFFFFF?text=Atividade+35" alt="Atividade infantil 35 - Colagem com papel crepom" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 35</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/16A085/FFFFFF?text=Atividade+36" alt="Atividade infantil 36 - Pintura com canudinho" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 36</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/D35400/FFFFFF?text=Atividade+37" alt="Atividade infantil 37 - Desenho com raspagem" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 37</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/C0392B/FFFFFF?text=Atividade+38" alt="Atividade infantil 38 - Pintura com bolhas" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 38</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/7F8C8D/FFFFFF?text=Atividade+39" alt="Atividade infantil 39 - Colagem com lã" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 39</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/BDC3C7/2C3E50?text=Atividade+40" alt="Atividade infantil 40 - Pintura com especiarias" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 40</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/FF6B6B/FFFFFF?text=Atividade+41" alt="Atividade infantil 41 - Desenho com pontilhismo" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 41</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/4ECDC4/FFFFFF?text=Atividade+42" alt="Atividade infantil 42 - Pintura com rolo de papel" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 42</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/45B7D1/FFFFFF?text=Atividade+43" alt="Atividade infantil 43 - Colagem com tecido" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 43</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/96CEB4/FFFFFF?text=Atividade+44" alt="Atividade infantil 44 - Pintura em madeira" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 44</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/FFEAA7/4A4A4A?text=Atividade+45" alt="Atividade infantil 45 - Desenho com giz pastel" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 45</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/D4A5A5/FFFFFF?text=Atividade+46" alt="Atividade infantil 46 - Pintura com borracha" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 46</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/9B59B6/FFFFFF?text=Atividade+47" alt="Atividade infantil 47 - Colagem com botões" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 47</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/3498DB/FFFFFF?text=Atividade+48" alt="Atividade infantil 48 - Pintura com escova de dentes" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 48</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/E67E22/FFFFFF?text=Atividade+49" alt="Atividade infantil 49 - Desenho com barbante" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 49</div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200/2ECC71/FFFFFF?text=Atividade+50" alt="Atividade infantil 50 - Pintura livre" class="placeholder-img">
+                </div>
+                <div class="activity-number">Atividade 50</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🌟 50 atividades criativas para estimular a imaginação das crianças! 🌟</p>
+            <p>Clique nos espaços para adicionar suas próprias imagens ou use as sugestões de atividades</p>
+            <p>🎨 Feito com carinho para pequenos artistas 🎨</p>
+        </div>
+    </div>
 </body>
 </html>
